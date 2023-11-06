@@ -14,7 +14,6 @@ function App() {
     if (storedToDos) {
       setToDos(JSON.parse(storedToDos));
     }
-    inputRef.current.focus();
   }, []);
 
   useEffect(() => {
@@ -26,7 +25,7 @@ function App() {
   })
   
   const edit=(id)=>{
-    const editTodo= toDos.find(item=>item.id===id)
+    const editTodo= toDos.find((item)=>item.id===id)
      setToDo(editTodo.text)
      setEditId(editTodo.id)
 
